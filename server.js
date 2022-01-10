@@ -25,8 +25,31 @@ const express = require("express");
 const app = express();
 const port = 3000;
 
+const books = [
+  {
+    id: 1,
+    name: "O`tgan kunlar",
+  },
+  {
+    id: 2,
+    name: "Mehrobdan Chayon",
+  },
+];
+
 app.get("/", (req, res) => {
   res.send("home");
+});
+
+app.get("/books", (req, res) => {
+  //! ---> "/books" bu joy "routing" deyiladi books ni o`zi "route" deyiladi
+  res.send(books); // sent qilsak yuboradigan ma`lumotimiz qanaqa formatda bo`lsa xuddi shunday bo`lib boradi.
+});
+
+app.get("/books/:id/", (req, res) => {
+  //! "Route"dan keyin keladigan qism "params" deyiladi
+  const { id } = req.params;
+  const foundBooks = books.find((e) => e.id == id);
+  res.send(foundBooks); // json qilsak yuboradigan ma`lumotimiz qanday bo`lihidan qat`iy nazar json farmatga o`girib yuboradi
 });
 
 app.listen(port, () => {
