@@ -24,8 +24,9 @@ bu node.js uchun tezkor, moslashuvchan, minimalistik web framework!
 const express = require("express");
 const app = express();
 const port = 3000;
+app.use(express.json()); // "json" formatda keladigan ma`lumotlarni aftamatik tarzda parse qib yuboradi!
 
-const books = [
+let books = [
   {
     id: 1,
     name: "O`tgan kunlar",
@@ -49,7 +50,25 @@ app.get("/books/:id/", (req, res) => {
   //! "Route"dan keyin keladigan qism "params" deyiladi
   const { id } = req.params;
   const foundBooks = books.find((e) => e.id == id);
-  res.send(foundBooks); // json qilsak yuboradigan ma`lumotimiz qanday bo`lihidan qat`iy nazar json farmatga o`girib yuboradi
+  res.send(foundBooks); // "res.json" qilsak yuboradigan ma`lumotimiz qanday bo`lishidan qat`iy nazar json farmatga o`girib yuboradi
+});
+
+app.post("/newBook", (req, res) => {
+  const { name } = req.body;
+  books.push({ id: books.length + 1, name });
+  res.send(books);
+});
+
+app.put("/updateBook", (req, res) => {
+  const { id, name } = req.body;
+  books.filter((e) => (e.id == id ? (e.name = name) : e));
+  res.send(books);
+});
+
+app.delete("/deleteBook", (req, res) => {
+  const { id } = req.body;
+  books = books.filter((e) => e.id !== id);
+  res.send(books);
 });
 
 app.listen(port, () => {
