@@ -23,17 +23,36 @@ bu node.js uchun tezkor, moslashuvchan, minimalistik web framework!
 
 const express = require("express");
 const app = express();
-const port = 3000;
+const cors = require("cors");
+const port = 9000;
 app.use(express.json()); // "json" formatda keladigan ma`lumotlarni aftamatik tarzda parse qib yuboradi!
+app.use(cors());
 
 let books = [
   {
     id: 1,
     name: "O`tgan kunlar",
+    cost: "$50",
   },
   {
     id: 2,
+    name: "5 bolalik yigitcha",
+    cost: "$40",
+  },
+  {
+    id: 3,
     name: "Mehrobdan Chayon",
+    cost: "$70",
+  },
+  {
+    id: 4,
+    name: "Sunbula",
+    cost: "$30",
+  },
+  {
+    id: 5,
+    name: "Sehrli shamchiroq",
+    cost: "$10",
   },
 ];
 
