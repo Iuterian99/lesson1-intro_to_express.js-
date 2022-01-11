@@ -32,21 +32,27 @@ let books = [
   {
     id: 1,
     name: "O`tgan kunlar",
+    info: `O'tgan kunlar — 1969-yilda o'zbek yozuvchisi Abdulla Qodiriyning shu nomli romani asosida rejissor Yo'ldosh A'zamov tomonidan tasvirga olingan film. Filmda (78 ta so'z) - 19:26, 14-Dekabr 2021.
+    O'tkan kunlar birinchi roman. 1969-yil „O'zbekfilm“ kinostudiyasida ushbu roman asosida „O'tgan kunlar“ nomli film suratga olingan.`,
     cost: "$50",
   },
   {
     id: 2,
     name: "5 bolalik yigitcha",
+    info: `Bolalik - beboshlik, deymiz. Ammo bu davr zahmatlarga mashaqqatlarga limmo-lim bo'lsa-chi? Beboshlikka, sho'xliklarga o'rin qolarmikin? Bunday bolaning qalbi, dunyosi kattalar hayotiga yaqin bo'ladi. O'zi bilib-bilmay tafakkuri o'sib, irodasi metin insonga aylanadi 
+    Muallif: Xudoyberdi To'xtaboyev`,
     cost: "$40",
   },
   {
     id: 3,
     name: "Mehrobdan Chayon",
+    info: `o'zbek romanchiligining asoschisi Abdulla Qodiriyning ikkinchi yirik asari 1928-yil fevralda yozib tugatilgan. Roman birinchi marta 1929-yil Samarqandda bosilib chiqdi. Roman mavzui 19-asr hodisalari — „xon zamonlari“ davridagi o'zboshimchaliklarni ko'rsatishga qaratilgan bo'lsada, unda roman yozilgan davr ruhi kuchli singdirilgan.`,
     cost: "$70",
   },
   {
     id: 4,
-    name: "Sunbula",
+    name: "Baxtiyor oila",
+    info: `Bu kitobda islom dinining oila munosabatlariga oid ahkomlari keng va batafsil bayon etilgan bo'lib, musulmon kishi oila hayotiga oid bilishi kerak bo'lgan barcha masalalarni qamrab olgan. Kitobda insonga ikki dunyo saodati yo'lini ko'rsatuvchi islom dinida baxtli oila qurish, er va xotinning huquq, burch va mas'uliyati, ota-ona va qaynona-kelin munosabatlari, kelin-kuyov tanlash haqida so'z boradi. , aqiqa, farzand tarbiyasi, rahm-shafqat va bir qancha masalalar bugungi kunda oyatlar, hadislar, salaf taqvodorlarining hayoti kabi ko'plab dolzarb mavzular ta'limotlari orqali muhokama qilinadi.`,
     cost: "$30",
   },
   {
